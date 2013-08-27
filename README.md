@@ -7,7 +7,7 @@ Clone all User or Organization repositories from GitHub
 
 1. Clone this script from github or copy the files manually to your prefered directory.
 
-2. Edit clone-user-or-org-repos.sh and change:
+2. Edit multiClone.sh and change:
 
 - REPOSNUM="120" - How many repos do you have on this account
 - DESTFOLDER="/folder" - Where to Clone
