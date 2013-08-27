@@ -7,11 +7,15 @@
 # GitHub Limitations:
 # For unauthenticated requests, the rate limit allows you to make up to 60 requests per hour.
 
-# Settings
-REPOSNUM="10" # How many repos do you have on this account
-DESTFOLDER="/MyGitRepositories/" # Where to Clone
-USERORG="1/2" # Select mode - User=1 Organization=2
-GITNAME="User/Organization Name" # User or Organization Name from GitHub url
+
+# Load settings
+if [ -f settings.cfg ] ; then
+    echo "Loading settings..."
+    source settings.cfg
+else
+    echo "ERROR: Create settings.cfg (from settings.cfg.example)"
+    exit
+fi;
 
 # CONST
 REPOSLIST="repos-list.txt"
