@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Clone all User or Organization repositories from GitHub
 #
@@ -12,6 +12,7 @@
 if [ -f settings.cfg ] ; then
     echo "Loading settings..."
     source settings.cfg
+    echo "blaa "$GITNAME
 else
     echo "ERROR: Create settings.cfg (from settings.cfg.example)"
     exit

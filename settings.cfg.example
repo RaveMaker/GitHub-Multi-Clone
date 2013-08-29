@@ -1,11 +1,17 @@
-#!/bin/bash
-
 # --------------------------------------------------------
 # Create settings.cfg and updated your settings
 # --------------------------------------------------------
 
 # Settings
-REPOSNUM="10" # How many repos do you have on this account
-DESTFOLDER="/MyGitRepositories/" # Where to Clone
-USERORG="1/2" # Select mode - User=1 Organization=2
-GITNAME="User/Organization Name" # User or Organization Name from GitHub url
+
+# How many repos do you have on this account
+REPOSNUM="10"
+
+# Where to Clone
+DESTFOLDER="/MyGitRepositories/"
+
+# Select mode - User=1 Organization=2
+USERORG="1/2"
+
+# User or Organization Name from GitHub url
+GITNAME="User/Organization Name"
