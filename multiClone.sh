@@ -12,7 +12,7 @@
 if [ -f settings.cfg ] ; then
     echo "Loading settings..."
     source settings.cfg
-    echo "blaa "$GITNAME
+    echo "Cloning Git: " $GITNAME
 else
     echo "ERROR: Create settings.cfg (from settings.cfg.example)"
     exit
@@ -54,17 +54,19 @@ done
 
 # Cut repos list to URLs only
 
-cat $REPOSLIST.2 | sed 's/"git_url": "//' | sed 's/",//' | sed '/^$/d' | sed 's/git:\/\/github.com\///' > $REPOSLIST
+cat $REPOSLIST.2 | sed 's/"git_url": "//' | sed 's/",//' | sed '/^$/d' | sed 's/git:\/\/github.com\///' | sed 's/ //g' | sed "s/$GITNAME\///g" | sed 's/.git//g' > $REPOSLIST
 rm -f $REPOSLIST.2
 
 # Clone GitHub repositories from URLs list file
 for REPO in `cat $REPOSLIST`
 do
-   SSHREPO="git@github.com:"$REPO
+   SSHREPO="git@github.com:$GITNAME/$REPO.git"
    git clone $SSHREPO
+   cd $REPO
+   git pull
+   pwd
    echo "#########################################"
-   echo $SSHREPO
-   echo "#########################################"
+   cd $DESTFOLDER
 done
 echo ""
 echo $GITNAME " repositories count:"
