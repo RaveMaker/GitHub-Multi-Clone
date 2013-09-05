@@ -2,7 +2,7 @@
 
 # Clone all User or Organization repositories from GitHub
 #
-# Create by RaveMaker - http://ravemaker.net
+# by RaveMaker - http://ravemaker.net
 #
 # GitHub Limitations:
 # For unauthenticated requests, the rate limit allows you to make up to 60 requests per hour.
