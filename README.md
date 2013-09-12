@@ -1,7 +1,9 @@
 GitHub-Multi-Clone
 ==================
 
-Clone all User or Organization repositories from GitHub also pulls latest update.
+Clone all User or Organization repositories from GitHub.
+
+Pulls latest update of each repo after clone.
 
 ### Installation
 
