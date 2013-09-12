@@ -1,7 +1,7 @@
 GitHub-Multi-Clone
 ==================
 
-Clone all User or Organization repositories from GitHub
+Clone all User or Organization repositories from GitHub also pulls latest update.
 
 ### Installation
 
@@ -13,6 +13,7 @@ Clone all User or Organization repositories from GitHub
 - DESTFOLDER="/folder" - Where to Clone
 - USERORG="1/2" - Select mode - User=1 Organization=2
 - GITNAME="User-or-Organization-Name" - User or Organization Name from GitHub url
+
 
 by [RaveMaker][RaveMaker].
 [RaveMaker]: http://ravemaker.net
