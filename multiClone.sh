@@ -61,9 +61,13 @@ rm -f $REPOSLIST.2
 for REPO in `cat $REPOSLIST`
 do
    SSHREPO="git@github.com:$GITNAME/$REPO.git"
-   git clone $SSHREPO
-   cd $REPO
-   git pull
+   if [ ! -d $REPO ]
+   then
+	git clone $SSHREPO
+   else
+	cd $REPO
+	git pull
+   fi
    pwd
    echo "#########################################"
    cd $DESTFOLDER
