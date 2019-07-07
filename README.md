@@ -17,5 +17,6 @@ Pulls latest update of each repo after clone.
 - GITNAME="User-or-Organization-Name" - User or Organization Name from GitHub url
 
 
-by [RaveMaker][RaveMaker].
+Author: [RaveMaker][RaveMaker].
+
 [RaveMaker]: http://ravemaker.net
