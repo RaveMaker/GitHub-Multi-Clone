@@ -71,7 +71,7 @@ function clone-repos() {
 }
 
 # Create destination folder if not exist
-mkdir -p "$DEST_FOLDER" && cd "$DEST_FOLDER" || exit
+cd "$DEST_FOLDER" 2> /dev/null || { echo "Destination folder doesn't exist" ; exit; }
 echo -n "Selected destination: "
 pwd
 
